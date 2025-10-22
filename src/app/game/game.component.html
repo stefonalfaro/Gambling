@@ -1,0 +1,10 @@
+<div class="slot-container">
+      <canvas id="renderCanvas"></canvas>
+      <div class="ui-overlay">
+        <div class="score">Credits: {{credits}}</div>
+        <div class="message" [class.win]="isWinning">{{message}}</div>
+        <button class="spin-btn" (click)="spin()" [disabled]="isSpinning || credits < 10">
+          {{isSpinning ? 'SPINNING...' : 'SPIN (10 credits)'}}
+        </button>
+      </div>
+    </div>
